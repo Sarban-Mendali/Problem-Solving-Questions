@@ -94,7 +94,47 @@ const fiveMarkData = [
 },
 {
 q:"Explain Divide and Conquer method.",
-a:"Divide and Conquer divides a problem into smaller subproblems, solves them independently, and combines their results to obtain the final solution. Examples include merge sort and quick sort."
+a: `
+  <strong>The Divide and Conquer method</strong> is a powerful problem-solving technique used in computer science to solve complex problems efficiently.
+  The main idea is to divide a problem into smaller sub-problems, solve them individually, and then combine their solutions.
+
+  <br><br>
+
+  <strong>Steps of Divide and Conquer</strong>
+
+  <br><br>
+
+  <strong>1. Divide</strong><br>
+  The given problem is divided into smaller sub-problems of the same type. This process continues until the sub-problems become simple enough to solve easily.
+
+  <br><br>
+
+  <strong>2. Conquer</strong><br>
+  Each sub-problem is solved independently. If a sub-problem is still large, the divide and conquer strategy is applied recursively.
+
+  <br><br>
+
+  <strong>3. Combine</strong><br>
+  The solutions of all sub-problems are combined to form the final solution to the original problem.
+
+  <br><br>
+
+  <strong>Advantages of Divide and Conquer</strong><br>
+  • Reduces the complexity of large problems<br>
+  • Improves efficiency and performance<br>
+  • Easy to implement using recursion<br>
+  • Suitable for parallel processing
+
+  <br><br>
+
+  <strong>Examples</strong><br>
+  Common algorithms based on divide and conquer include <strong>Binary Search, Merge Sort, and Quick Sort</strong>.
+
+  <br><br>
+
+  <strong>Conclusion:</strong><br>
+  Divide and Conquer simplifies problem solving by breaking complex problems into smaller, manageable parts, making algorithms faster and more efficient.
+  `
 },
 {
 q:"Explain the structure of C program with diagram.",
