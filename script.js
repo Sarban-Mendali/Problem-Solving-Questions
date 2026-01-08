@@ -145,23 +145,320 @@ a:"A C program consists of documentation section, link section, definition secti
 },
 {
 q:"Explain different data types supported by C language.",
-a:"C supports basic data types like int, char, float, double, derived data types like arrays, pointers, structures, unions, and enumeration data types."
+a:`
+  <strong>Different Data Types Supported by C Language</strong><br><br>
+
+  In the C programming language, data types specify the type of data a variable can store. 
+  C supports several categories of data types to handle different kinds of data efficiently.
+
+  <br><br>
+
+  <strong>1. Basic (Primary) Data Types</strong><br>
+  These are the fundamental data types used in C.
+
+  <br>
+  <strong>int</strong> – Used to store whole numbers (integers).<br>
+  <strong>float</strong> – Used to store decimal (real) numbers with single precision.<br>
+  <strong>double</strong> – Used to store decimal numbers with double precision.<br>
+  <strong>char</strong> – Used to store a single character.
+
+  <br><br>
+
+  <strong>2. Derived Data Types</strong><br>
+  These data types are derived from basic data types.
+
+  <br>
+  <strong>Array</strong> – Collection of elements of the same data type.<br>
+  <strong>Pointer</strong> – Stores the address of another variable.<br>
+  <strong>Function</strong> – A block of code that performs a specific task.
+
+  <br><br>
+
+  <strong>3. User-Defined Data Types</strong><br>
+  These allow programmers to create their own data types.
+
+  <br>
+  <strong>struct (Structure)</strong> - Groups variables of different data types.<br>
+  <strong>union</strong> - Similar to structure but shares memory among members.<br>
+  <strong>enum (Enumeration)</strong> - Assigns names to integer constants.<br>
+  <strong>typedef</strong> - Used to create an alias name for an existing data type.
+
+  <br><br>
+
+  <strong>4. Void Data Type</strong><br>
+  <strong>void</strong> - Represents the absence of a value. Commonly used in functions that do not return a value.
+
+  <br><br>
+
+  <strong>Conclusion:</strong><br>
+  C language provides a wide range of data types to efficiently manage data. 
+  Understanding these data types helps programmers write optimized, clear, and effective C programs.
+  `
 },
 {
 q:"Explain the use of #define with an example.",
-a:"#define is used to define macros. It replaces a constant or expression before compilation. Example: #define PI 3.14."
+a:`
+  <strong>Use of # and #define in C Language (with Example)</strong><br><br>
+
+  In the C programming language, the symbol <strong>#</strong> is used at the beginning of
+  <strong>preprocessor directives</strong>. These directives are processed before compilation
+  by the C preprocessor.
+
+  <br><br>
+
+  <strong>Use of # (Hash Symbol)</strong><br>
+  The <strong>#</strong> symbol tells the compiler that the statement is a preprocessor directive.
+  Some commonly used preprocessor directives are:
+
+  <br><br>
+
+  • <strong>#include</strong> - Includes header files<br>
+  • <strong>#define</strong> - Defines constants or macros<br>
+  • <strong>#undef</strong> - Undefines a macro
+
+  <br><br>
+
+  <strong>Example:</strong>
+
+  <br><br>
+
+  <code>
+  #include &lt;stdio.h&gt;
+  </code>
+
+  <br><br>
+
+  Here, the <strong>#</strong> symbol instructs the compiler to include the contents of the
+  <strong>stdio.h</strong> header file before the program is compiled. This allows the use of
+  input and output functions like <strong>printf()</strong> and <strong>scanf()</strong>.
+
+  <br><br>
+
+  <strong>Use of #define</strong><br>
+  The <strong>#define</strong> directive is used to define constants or macros.
+  The preprocessor replaces the defined identifier with its value before compilation.
+
+  <br><br>
+
+  <code>
+  #define PI 3.14
+  </code>
+
+  <br><br>
+
+  Wherever <strong>PI</strong> is used in the program, it is replaced with <strong>3.14</strong>
+  during preprocessing.
+
+  <br><br>
+
+  <strong>Conclusion:</strong><br>
+  The <strong>#</strong> symbol is essential for identifying preprocessor directives, while
+  <strong>#define</strong> is mainly used to create symbolic constants and macros.
+  These directives improve program readability, flexibility, and maintainability.
+  `
 },
 {
 q:"Write a program to find length of a string.",
-a:"The program uses strlen() function or a loop to count characters until the null character is encountered."
+a:`
+  <strong>Program to Find the Length of a String in C</strong><br><br>
+
+  Below is a simple C program to find the length of a string
+  <strong>without using built-in functions</strong>, which is commonly expected in examinations.
+
+  <br><br>
+
+  <strong>Program (Without Using strlen)</strong>
+
+  <br><br>
+
+  <code>
+  #include &lt;stdio.h&gt;<br><br>
+
+  int main() {<br>
+  &nbsp;&nbsp;char str[100];<br>
+  &nbsp;&nbsp;int length = 0;<br><br>
+
+  &nbsp;&nbsp;printf("Enter a string: ");<br>
+  &nbsp;&nbsp;gets(str);<br><br>
+
+  &nbsp;&nbsp;while (str[length] != '\\0') {<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;length++;<br>
+  &nbsp;&nbsp;}<br><br>
+
+  &nbsp;&nbsp;printf("Length of the string = %d", length);<br>
+  &nbsp;&nbsp;return 0;<br>
+  }
+  </code>
+
+  <br><br>
+
+  <strong>Explanation</strong><br>
+  • A character array <strong>str</strong> is used to store the string.<br>
+  • The loop counts characters until the null character <strong>'\\0'</strong> is encountered.<br>
+  • The total count represents the length of the string.
+
+  <br><br>
+
+  <strong>Using Built-in Function (strlen)</strong>
+
+  <br><br>
+
+  <code>
+  #include &lt;stdio.h&gt;<br>
+  #include &lt;string.h&gt;<br><br>
+
+  int main() {<br>
+  &nbsp;&nbsp;char str[100];<br><br>
+
+  &nbsp;&nbsp;printf("Enter a string: ");<br>
+  &nbsp;&nbsp;gets(str);<br><br>
+
+  &nbsp;&nbsp;printf("Length of the string = %lu", strlen(str));<br>
+  &nbsp;&nbsp;return 0;<br>
+  }
+  </code>
+
+  <br><br>
+
+  <strong>Output (Example)</strong><br>
+  Enter a string: Hello<br>
+  Length of the string = 5
+
+  <br><br>
+
+  <strong>Conclusion:</strong><br>
+  The length of a string in C can be determined either by manually counting characters
+  until the null character or by using the built-in <strong>strlen()</strong> function.
+  `
 },
 {
 q:"Differentiate between call by value and call by reference.",
-a:"In call by value, a copy of variable is passed and changes do not affect original value. In call by reference, address is passed and changes affect original variable."
+a:`
+  <strong>Difference Between Call by Value and Call by Reference</strong>
+  <br><br>
+
+  <table border="1" cellpadding="8" cellspacing="0" width="100%" style="border-collapse:collapse; font-size:14px;">
+    <tr style="background:#f3f4f6;">
+      <th>Basis</th>
+      <th>Call by Value</th>
+      <th>Call by Reference</th>
+    </tr>
+
+    <tr>
+      <td><strong>Definition</strong></td>
+      <td>A copy of the actual argument is passed to the function</td>
+      <td>The address of the actual argument is passed to the function</td>
+    </tr>
+
+    <tr>
+      <td><strong>Data Change</strong></td>
+      <td>Changes made inside the function do not affect the original variable</td>
+      <td>Changes made inside the function affect the original variable</td>
+    </tr>
+
+    <tr>
+      <td><strong>Memory Usage</strong></td>
+      <td>Uses separate memory for function parameters</td>
+      <td>Uses the same memory location through address</td>
+    </tr>
+
+    <tr>
+      <td><strong>Safety</strong></td>
+      <td>Original data is safe from accidental changes</td>
+      <td>Original data can be modified</td>
+    </tr>
+
+    <tr>
+      <td><strong>Function Arguments</strong></td>
+      <td>Values are passed</td>
+      <td>Pointers (addresses) are passed</td>
+    </tr>
+
+    <tr>
+      <td><strong>Speed</strong></td>
+      <td>Slightly slower due to copying of data</td>
+      <td>Faster as no data copying is involved</td>
+    </tr>
+
+    <tr>
+      <td><strong>Example</strong></td>
+      <td><code>void func(int x)</code></td>
+      <td><code>void func(int *x)</code></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <strong>Conclusion:</strong><br>
+  Call by Value provides better safety as it does not modify original data,
+  whereas Call by Reference is more efficient and allows functions to modify
+  the actual variables.
+  `
 },
 {
 q:"Differentiate between pseudo code and ASCII code.",
-a:"Pseudo code is an algorithm representation, whereas ASCII code is a character encoding standard."
+a:`
+  <strong>Difference Between Pseudocode and ASCII Code</strong>
+  <br><br>
+
+  <table border="1" cellpadding="8" cellspacing="0" width="100%" 
+         style="border-collapse:collapse; font-size:14px;">
+    <tr style="background:#f3f4f6;">
+      <th>Basis</th>
+      <th>Pseudocode</th>
+      <th>ASCII Code</th>
+    </tr>
+
+    <tr>
+      <td><strong>Meaning</strong></td>
+      <td>Pseudocode is an informal way of writing the logic of a program</td>
+      <td>ASCII is a standard code used to represent characters in computers</td>
+    </tr>
+
+    <tr>
+      <td><strong>Purpose</strong></td>
+      <td>Used to plan and understand program logic before coding</td>
+      <td>Used to represent letters, numbers, and symbols in binary form</td>
+    </tr>
+
+    <tr>
+      <td><strong>Nature</strong></td>
+      <td>Not a programming language</td>
+      <td>Character encoding standard</td>
+    </tr>
+
+    <tr>
+      <td><strong>Syntax Rules</strong></td>
+      <td>No strict syntax rules</td>
+      <td>Follows a fixed standard code</td>
+    </tr>
+
+    <tr>
+      <td><strong>Execution</strong></td>
+      <td>Cannot be executed by a computer</td>
+      <td>Used internally by computers for data representation</td>
+    </tr>
+
+    <tr>
+      <td><strong>Usage Stage</strong></td>
+      <td>Used in problem analysis and design phase</td>
+      <td>Used in data storage and data communication</td>
+    </tr>
+
+    <tr>
+      <td><strong>Example</strong></td>
+      <td><code>READ a, b; SUM = a + b</code></td>
+      <td><code>'A' = 65, 'a' = 97, '0' = 48</code></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <strong>Conclusion:</strong><br>
+  Pseudocode helps programmers design and understand the solution logic,
+  while ASCII code helps computers understand and represent characters.
+  Both serve completely different purposes in computer science.
+  `
 }
 ];
 
