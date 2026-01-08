@@ -54,6 +54,43 @@ const data=[
 {q:"Text processing?",a:"Manipulating textual data."}
 ];
 
+const fiveMarkData = [
+{
+q:"Explain different steps in problem solving.",
+a:"The steps in problem solving include problem definition, analysis, algorithm design, flowchart or pseudo code preparation, coding, testing, debugging, and documentation."
+},
+{
+q:"Explain Divide and Conquer method.",
+a:"Divide and Conquer divides a problem into smaller subproblems, solves them independently, and combines their results to obtain the final solution. Examples include merge sort and quick sort."
+},
+{
+q:"Explain the structure of C program with diagram.",
+a:"A C program consists of documentation section, link section, definition section, global declaration, main() function, and subprograms. Each section serves a specific purpose in program execution."
+},
+{
+q:"Explain different data types supported by C language.",
+a:"C supports basic data types like int, char, float, double, derived data types like arrays, pointers, structures, unions, and enumeration data types."
+},
+{
+q:"Explain the use of #define with an example.",
+a:"#define is used to define macros. It replaces a constant or expression before compilation. Example: #define PI 3.14."
+},
+{
+q:"Write a program to find length of a string.",
+a:"The program uses strlen() function or a loop to count characters until the null character is encountered."
+},
+{
+q:"Differentiate between call by value and call by reference.",
+a:"In call by value, a copy of variable is passed and changes do not affect original value. In call by reference, address is passed and changes affect original variable."
+},
+{
+q:"Differentiate between pseudo code and ASCII code.",
+a:"Pseudo code is an algorithm representation, whereas ASCII code is a character encoding standard."
+}
+];
+
+
+
 let i=0;
 function load(){
     q.innerText=data[i].q;
@@ -85,3 +122,27 @@ data.forEach((x,n)=>{
     list.appendChild(c);
 });
 load();
+
+const fiveMarksList = document.getElementById("fiveMarksList");
+
+fiveMarkData.forEach((item, index) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+        <div class="question">${index + 1}. ${item.q}</div>
+        <button class="action-btn">Show Answer</button>
+        <div class="answer">${item.a}</div>
+    `;
+
+    const btn = card.querySelector("button");
+    const ans = card.querySelector(".answer");
+
+    btn.onclick = () => {
+        ans.style.display = ans.style.display === "none" ? "block" : "none";
+    };
+
+    fiveMarksList.appendChild(card);
+});
+
+
