@@ -162,7 +162,7 @@ fiveMarkData.forEach((x, n) => {
 
     c.innerHTML = `
         <div class="question">${n + 1}. ${x.q}</div>
-        <button class="action-btn">Show Answer</button>
+        <button class="action-btn">Show / Hide Answer</button>
         <div class="answer">${x.a}</div>
     `;
 
