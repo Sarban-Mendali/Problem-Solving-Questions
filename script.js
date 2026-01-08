@@ -154,29 +154,28 @@ data.forEach((x,n)=>{
     };
     list.appendChild(c);
 });
-load();
-
 const fiveMarksList = document.getElementById("fiveMarksList");
 
-fiveMarkData.forEach((item, index) => {
-    const card = document.createElement("div");
-    card.className = "card";
+fiveMarkData.forEach((x, n) => {
+    const c = document.createElement("div");
+    c.className = "card";
 
-card.innerHTML = `
-  <div class="question">${index + 1}. ${item.q}</div>
-  <button class="action-btn">Show Answer</button>
-  <div class="answer">${item.a}</div>
-`;
+    c.innerHTML = `
+        <div class="question">${n + 1}. ${x.q}</div>
+        <button class="action-btn">Show Answer</button>
+        <div class="answer">${x.a}</div>
+    `;
 
-
-    const btn = card.querySelector("button");
-    const ans = card.querySelector(".answer");
-
-    btn.onclick = () => {
+    c.querySelector("button").onclick = () => {
+        const ans = c.querySelector(".answer");
         ans.style.display = ans.style.display === "none" ? "block" : "none";
     };
 
-    fiveMarksList.appendChild(card);
+    fiveMarksList.appendChild(c);
 });
+
+load();
+
+
 
 
