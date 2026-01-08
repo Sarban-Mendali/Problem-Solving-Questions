@@ -56,7 +56,7 @@ const data=[
 
 const fiveMarkData = [
 {
-  q: "Explain the different steps in Problem Solving. (5 Marks)",
+  q: "Explain the different steps in Problem Solving.",
   a: `
   <strong>Problem solving</strong> is a systematic process used to find effective solutions to a given problem.  
   The main steps involved are:
