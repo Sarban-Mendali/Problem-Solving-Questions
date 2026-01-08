@@ -56,9 +56,42 @@ const data=[
 
 const fiveMarkData = [
 {
-q:"Explain different steps in problem solving.",
-a:"The steps in problem solving include problem definition, analysis, algorithm design, flowchart or pseudo code preparation, coding, testing, debugging, and documentation."
-},
+  q: "Explain the different steps in Problem Solving. (5 Marks)",
+  a: `
+  <strong>Problem solving</strong> is a systematic process used to find effective solutions to a given problem.  
+  The main steps involved are:
+
+  <br><br>
+
+  <strong>1. Problem Identification</strong><br>
+  The first step is to clearly understand and define the problem. This includes knowing what the problem is, why it exists, and what needs to be solved.
+
+  <br><br>
+
+  <strong>2. Problem Analysis</strong><br>
+  In this step, the problem is studied in detail. Relevant information is collected, constraints are identified, and the problem is broken into smaller parts for better understanding.
+
+  <br><br>
+
+  <strong>3. Designing the Solution (Algorithm / Planning)</strong><br>
+  A logical plan or algorithm is prepared to solve the problem step by step. Flowcharts or pseudocode may be used to represent the solution clearly.
+
+  <br><br>
+
+  <strong>4. Implementation (Coding)</strong><br>
+  The designed solution is converted into a program or actual solution using a suitable programming language or method.
+
+  <br><br>
+
+  <strong>5. Testing</strong><br>
+  The solution is tested using different inputs to check whether it works correctly and produces the expected results.
+
+  <br><br>
+
+  <strong>6. Debugging</strong><br>
+  Errors found during testing are identified and corrected to ensure the program runs smoothly and correctly.
+  `
+}
 {
 q:"Explain Divide and Conquer method.",
 a:"Divide and Conquer divides a problem into smaller subproblems, solves them independently, and combines their results to obtain the final solution. Examples include merge sort and quick sort."
@@ -129,11 +162,12 @@ fiveMarkData.forEach((item, index) => {
     const card = document.createElement("div");
     card.className = "card";
 
-    card.innerHTML = `
-        <div class="question">${index + 1}. ${item.q}</div>
-        <button class="action-btn">Show Answer</button>
-        <div class="answer">${item.a}</div>
-    `;
+card.innerHTML = `
+  <div class="question">${index + 1}. ${item.q}</div>
+  <button class="action-btn">Show Answer</button>
+  <div class="answer">${item.a}</div>
+`;
+
 
     const btn = card.querySelector("button");
     const ans = card.querySelector(".answer");
