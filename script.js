@@ -196,7 +196,7 @@ a:`
   `
 },
 {
-q:"Explain the use of #define with an example.",
+q:"Explain the use of '#' and define with an example.",
 a:`
   <strong>Use of # and #define in C Language (with Example)</strong><br><br>
 
