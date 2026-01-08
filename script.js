@@ -91,7 +91,7 @@ const fiveMarkData = [
   <strong>6. Debugging</strong><br>
   Errors found during testing are identified and corrected to ensure the program runs smoothly and correctly.
   `
-}
+},
 {
 q:"Explain Divide and Conquer method.",
 a:"Divide and Conquer divides a problem into smaller subproblems, solves them independently, and combines their results to obtain the final solution. Examples include merge sort and quick sort."
