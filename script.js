@@ -89,7 +89,9 @@ const fiveMarkData = [
   <br><br>
 
   <strong>6. Debugging</strong><br>
-  Errors found during testing are identified and corrected to ensure the program runs smoothly and correctly.
+  Errors found during testing are identified and corrected to ensure the program runs smoothly and correctly.<br>
+  <strong>Conclusion:</strong><br>
+Following these steps ensures a structured and efficient approach to problem solving, reducing errors and improving solution quality.
   `
 },
 {
